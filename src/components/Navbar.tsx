@@ -27,8 +27,8 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "py-4" : "py-6"}`}>
-        <div className={`max-w-6xl mx-auto px-6 transition-all duration-300 ${isScrolled ? "bg-black/60 backdrop-blur-xl border-b border-blue-900/30 shadow-[0_4px_30px_rgba(0,102,255,0.1)] rounded-b-2xl md:rounded-full md:border md:bg-[#0a0f1e]/70" : ""}`}>
+      <div className={`fixed w-full z-50 transition-all duration-300 px-4 ${isScrolled ? "top-2" : "top-6"}`}>
+        <div className="max-w-6xl mx-auto px-6 glass-panel rounded-full shadow-[0_4px_30px_rgba(0,102,255,0.15)] transition-all duration-300">
           <div className="flex items-center justify-between h-14">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
@@ -48,9 +48,8 @@ export default function Navbar() {
                   {link.label}
                 </Link>
               ))}
-              
               <button className="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2 rounded-md font-semibold text-sm transition-all glow-border-blue ml-4">
-                Register (₹999/-)
+                Register Now
               </button>
             </div>
 

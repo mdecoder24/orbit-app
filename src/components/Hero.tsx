@@ -13,8 +13,8 @@ export default function Hero() {
   });
 
   useEffect(() => {
-    // Target date: October 1, 2025
-    const targetDate = new Date("October 1, 2025 00:00:00").getTime();
+    // Target date: October 1, 2026
+    const targetDate = new Date("October 1, 2026 00:00:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -88,7 +88,7 @@ export default function Hero() {
           transition={{ delay: 0.3 }}
           className="text-sm font-bold text-gray-300 tracking-[0.2em] uppercase mb-12"
         >
-          October 1 - October 10, 2025
+          October 1 - October 10, 2026
         </motion.p>
 
         {/* Countdown */}
