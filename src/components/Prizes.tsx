@@ -6,7 +6,7 @@ import { Medal, Check, ScrollText, Rocket, Brain, Laptop } from "lucide-react";
 
 export default function Prizes() {
   return (
-    <section id="prizes" className="py-24 px-6 bg-black">
+    <section id="prizes" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-blue-500 font-bold tracking-[0.2em] text-xs mb-4 uppercase">

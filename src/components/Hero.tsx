@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Globe from "./Globe";
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({
@@ -44,11 +43,8 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative pt-40 pb-20 px-6 flex flex-col items-center justify-center min-h-screen overflow-hidden">
-      {/* Sleek Globe Background */}
-      <Globe />
-
-      <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto mt-16">
+    <section className="relative pt-24 pb-32 px-6 flex flex-col items-center justify-center min-h-screen overflow-hidden">
+      <div className="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto mt-8">
         
         {/* Badge */}
         <motion.div 

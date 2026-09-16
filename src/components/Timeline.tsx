@@ -18,7 +18,7 @@ const timelineEvents = [
 
 export default function Timeline() {
   return (
-    <section id="timeline" className="py-24 px-6 bg-black relative">
+    <section id="timeline" className="py-24 px-6 relative">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-blue-500 font-bold tracking-[0.2em] text-xs mb-4 uppercase">
