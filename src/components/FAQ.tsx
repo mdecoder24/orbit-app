@@ -42,24 +42,24 @@ export default function FAQ() {
     <section id="faq" className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-blue-600 font-bold tracking-[0.2em] text-xs mb-4 uppercase">
+          <p className="text-cyan-400 font-bold tracking-[0.2em] text-xs mb-4 uppercase text-glow">
             GOT QUESTIONS?
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">FAQ</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-2 drop-shadow-md">FAQ</h2>
         </div>
 
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="glass-panel rounded-xl overflow-hidden transition-all duration-300"
+              className="glass-panel rounded-xl overflow-hidden transition-all duration-300 border-white/10 hover:border-cyan-500/30 group hover:shadow-[0_0_15px_rgba(6,182,212,0.1)]"
             >
               <button
                 onClick={() => toggleFaq(index)}
                 className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
               >
-                <span className="text-slate-900 font-medium text-lg">{faq.question}</span>
-                <span className="text-blue-600 flex-shrink-0 ml-4">
+                <span className="text-gray-200 group-hover:text-white transition-colors font-medium text-lg">{faq.question}</span>
+                <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors flex-shrink-0 ml-4">
                   {openIndex === index ? (
                     <Minus className="w-5 h-5" />
                   ) : (
@@ -76,7 +76,7 @@ export default function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    <div className="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-200 pt-4">
+                    <div className="px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-white/10 pt-4">
                       {faq.answer}
                     </div>
                   </motion.div>
