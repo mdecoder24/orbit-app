@@ -48,11 +48,11 @@ export default function Hero() {
         </motion.div>
 
         {/* Main headline */}
-        <motion.h1 {...fadeUp(0.05)} className="font-display font-black leading-[1.05] tracking-tighter mb-8 flex flex-col items-center">
+        <motion.h1 {...fadeUp(0.05)} className="font-display font-bold tracking-tight mb-8 flex flex-col items-center">
           <span
             className="text-white drop-shadow-md"
             style={{
-              fontSize: "clamp(4rem, 12vw, 8rem)",
+              fontSize: "clamp(4rem, 10vw, 7rem)",
             }}
           >
             BUILDATHON
@@ -60,35 +60,42 @@ export default function Hero() {
         </motion.h1>
 
         {/* Description */}
-        <motion.p {...fadeUp(0.15)} className="text-gray-400 text-base md:text-lg leading-relaxed max-w-2xl mb-12">
-          A <strong className="text-white font-semibold">10-day solo sprint</strong> where individuals build autonomous AI agents and real <br className="hidden md:block" />
-          products from idea to deployed MVP.<br />
-          <span className="text-blue-500 font-medium block mt-2">Mentored. Evaluated. Rewarded.</span>
+        <motion.p {...fadeUp(0.15)} className="text-gray-400 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-12">
+          A <strong className="text-white font-semibold">10-day solo sprint</strong> where individuals build autonomous AI agents and real products from idea to deployed MVP.
+          <span className="text-blue-500 font-medium block mt-3">Mentored. Evaluated. Rewarded.</span>
         </motion.p>
 
         {/* Countdown */}
         <motion.div {...fadeUp(0.2)} className="flex flex-col items-center mb-10 w-full">
           <p className="text-[10px] md:text-[11px] text-blue-500 font-bold tracking-[0.3em] uppercase mb-4">Systems go live in</p>
-          <div className="flex items-center justify-center gap-4 sm:gap-8 bg-[#0a0f1e]/60 px-6 sm:px-12 py-5 rounded-[2rem] border border-white/5 shadow-2xl w-full max-w-xl overflow-x-auto no-scrollbar backdrop-blur-md">
-            <div className="flex flex-col items-center">
-              <span className="text-3xl md:text-4xl font-black text-white font-mono leading-none">{timeLeft.days.toString().padStart(2, "0")}</span>
-              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-3">Days</span>
+          <div className="flex items-start justify-center gap-4 sm:gap-8 bg-[#0a0f1e]/60 px-6 sm:px-12 pt-6 pb-10 rounded-[2rem] border border-white/5 shadow-2xl w-full max-w-xl backdrop-blur-md">
+            
+            <div className="flex flex-col items-center relative">
+              <span className="text-4xl md:text-5xl font-bold text-white font-mono leading-none">{timeLeft.days.toString().padStart(2, "0")}</span>
+              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase absolute -bottom-7">Days</span>
             </div>
-            <span className="text-xl md:text-3xl text-blue-600 font-bold pb-[22px] md:pb-[26px]">:</span>
-            <div className="flex flex-col items-center">
-              <span className="text-3xl md:text-4xl font-black text-white font-mono leading-none">{timeLeft.hours.toString().padStart(2, "0")}</span>
-              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-3">Hours</span>
+            
+            <span className="text-2xl md:text-4xl text-blue-600 font-bold leading-none mt-1">:</span>
+            
+            <div className="flex flex-col items-center relative">
+              <span className="text-4xl md:text-5xl font-bold text-white font-mono leading-none">{timeLeft.hours.toString().padStart(2, "0")}</span>
+              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase absolute -bottom-7">Hours</span>
             </div>
-            <span className="text-xl md:text-3xl text-blue-600 font-bold pb-[22px] md:pb-[26px]">:</span>
-            <div className="flex flex-col items-center">
-              <span className="text-3xl md:text-4xl font-black text-white font-mono leading-none">{timeLeft.minutes.toString().padStart(2, "0")}</span>
-              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-3">Min</span>
+            
+            <span className="text-2xl md:text-4xl text-blue-600 font-bold leading-none mt-1">:</span>
+            
+            <div className="flex flex-col items-center relative">
+              <span className="text-4xl md:text-5xl font-bold text-white font-mono leading-none">{timeLeft.minutes.toString().padStart(2, "0")}</span>
+              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase absolute -bottom-7">Min</span>
             </div>
-            <span className="text-xl md:text-3xl text-blue-600 font-bold pb-[22px] md:pb-[26px]">:</span>
-            <div className="flex flex-col items-center">
-              <span className="text-3xl md:text-4xl font-black text-white font-mono leading-none">{timeLeft.seconds.toString().padStart(2, "0")}</span>
-              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-3">Sec</span>
+            
+            <span className="text-2xl md:text-4xl text-blue-600 font-bold leading-none mt-1">:</span>
+            
+            <div className="flex flex-col items-center relative">
+              <span className="text-4xl md:text-5xl font-bold text-white font-mono leading-none">{timeLeft.seconds.toString().padStart(2, "0")}</span>
+              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase absolute -bottom-7">Sec</span>
             </div>
+            
           </div>
         </motion.div>
 
