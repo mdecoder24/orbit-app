@@ -4,7 +4,6 @@ import StatsBar from "@/components/StatsBar";
 import AboutSection from "@/components/AboutSection";
 import Themes from "@/components/Themes";
 import Timeline from "@/components/Timeline";
-import RewardsAndTakeaways from "@/components/RewardsAndTakeaways";
 import FAQ from "@/components/FAQ";
 import InteractiveBackground from "@/components/InteractiveBackground";
 import Floating3DBackground from "@/components/Floating3DBackground";
@@ -22,7 +21,6 @@ export default function Home() {
       <AboutSection />
       <Themes />
       <Timeline />
-      <RewardsAndTakeaways />
       <FAQ />
     </main>
   );
