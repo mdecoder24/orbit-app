@@ -33,42 +33,36 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 pt-24 pb-8 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-6 pt-20 pb-4 overflow-hidden">
       
 
 
       <TiltCard tiltAmount={3} className="max-w-5xl mx-auto w-full flex flex-col items-center text-center relative z-10">
         
-        {/* Trust badge */}
-        <motion.div {...fadeUp(0)} className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8">
-          <span className="w-2 h-2 rounded-full bg-blue-500" />
-          <span className="text-[10px] font-bold text-blue-500 tracking-[0.2em] uppercase">
-            Registrations Open
-          </span>
-        </motion.div>
+
 
         {/* Main headline */}
-        <motion.h1 {...fadeUp(0.05)} className="font-display font-bold tracking-tight mb-8 flex flex-col items-center">
+        <motion.h1 {...fadeUp(0.05)} className="font-display font-black tracking-tight leading-[1.05] mb-4 flex flex-col items-center">
           <span
-            className="text-white drop-shadow-md"
+            className="text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-blue-400 drop-shadow-sm uppercase text-center"
             style={{
-              fontSize: "clamp(4rem, 10vw, 7rem)",
+              fontSize: "clamp(3.5rem, 10vw, 7.5rem)",
             }}
           >
-            BUILDATHON
+            AI Buildathon
           </span>
         </motion.h1>
 
         {/* Description */}
-        <motion.p {...fadeUp(0.15)} className="text-gray-400 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-12">
+        <motion.p {...fadeUp(0.15)} className="text-gray-400 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-8">
           A <strong className="text-white font-semibold">10-day solo sprint</strong> where individuals build autonomous AI agents and real products from idea to deployed MVP.
-          <span className="text-blue-500 font-medium block mt-3">Mentored. Evaluated. Rewarded.</span>
+          <span className="text-blue-500 font-medium block mt-2">Mentored. Evaluated. Rewarded.</span>
         </motion.p>
 
         {/* Countdown */}
-        <motion.div {...fadeUp(0.2)} className="flex flex-col items-center mb-10 w-full">
-          <p className="text-[10px] md:text-[11px] text-blue-500 font-bold tracking-[0.3em] uppercase mb-4">Systems go live in</p>
-          <div className="flex items-start justify-center gap-4 sm:gap-8 bg-[#0a0f1e]/60 px-6 sm:px-12 pt-6 pb-10 rounded-[2rem] border border-white/5 shadow-2xl w-full max-w-xl backdrop-blur-md">
+        <motion.div {...fadeUp(0.2)} className="flex flex-col items-center mb-6 w-full">
+          <p className="text-[10px] md:text-[11px] text-blue-500 font-bold tracking-[0.3em] uppercase mb-3">Systems go live in</p>
+          <div className="flex items-start justify-center gap-4 sm:gap-8 bg-[#0a0f1e]/60 px-6 sm:px-12 pt-5 pb-8 rounded-[2rem] border border-white/5 shadow-2xl w-full max-w-xl backdrop-blur-md">
             
             <div className="flex flex-col items-center relative">
               <span className="text-4xl md:text-5xl font-bold text-white font-mono leading-none">{timeLeft.days.toString().padStart(2, "0")}</span>
@@ -100,7 +94,7 @@ export default function Hero() {
         </motion.div>
 
         {/* CTAs */}
-        <motion.div {...fadeUp(0.25)} className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full mt-4">
+        <motion.div {...fadeUp(0.25)} className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full mt-2">
           <button 
             onClick={openModal}
             className="px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold text-sm md:text-base transition-all duration-300 shadow-[0_0_30px_rgba(37,99,235,0.3)] hover:shadow-[0_0_50px_rgba(37,99,235,0.6)] flex items-center gap-2 group"
