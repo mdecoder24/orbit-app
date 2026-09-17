@@ -4,9 +4,11 @@ import React, { useEffect, useRef } from "react";
 
 export default function InteractiveBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const spotlightRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    const spotlight = spotlightRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
@@ -27,6 +29,11 @@ export default function InteractiveBackground() {
     const handleMouseMove = (e: MouseEvent) => {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
+      
+      // Update Spotlight
+      if (spotlight) {
+        spotlight.style.background = `radial-gradient(circle 800px at ${e.clientX}px ${e.clientY}px, rgba(0, 150, 255, 0.12), transparent 80%)`;
+      }
     };
     window.addEventListener("mousemove", handleMouseMove);
 
@@ -131,6 +138,9 @@ export default function InteractiveBackground() {
 
   return (
     <div className="fixed inset-0 z-[-1] pointer-events-none bg-[#020510]">
+      {/* Dynamic Spotlight */}
+      <div ref={spotlightRef} className="absolute inset-0 transition-opacity duration-300" />
+      
       {/* Subtle Grid Overlay */}
       <div 
         className="absolute inset-0 opacity-[0.03]"

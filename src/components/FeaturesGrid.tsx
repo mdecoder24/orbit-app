@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Trophy, FileBadge, Rocket, Brain, Zap, Globe } from "lucide-react";
+import TiltCard from "@/components/TiltCard";
 
 const features = [
   {
@@ -43,22 +44,23 @@ export default function FeaturesGrid() {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: index * 0.1, type: "spring", stiffness: 100 }}
-              className="glass-panel rounded-2xl p-8 transition-all duration-300 group cursor-default"
-            >
-              <div className="group-hover:-translate-y-2 transition-transform duration-300">
-                {feature.icon}
-                <h4 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors font-display">{feature.title}</h4>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            </motion.div>
+            <TiltCard key={index} tiltAmount={10} className="h-full">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="glass-panel p-8 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group h-full flex flex-col"
+              >
+                <div className="group-hover:-translate-y-2 transition-transform duration-300">
+                  {feature.icon}
+                  <h4 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors font-display">{feature.title}</h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </motion.div>
+            </TiltCard>
           ))}
         </div>
       </div>

@@ -35,7 +35,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-24 pb-8 overflow-hidden">
       
       {/* AI Glowing Core Background Effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] opacity-20 pointer-events-none flex items-center justify-center">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] opacity-50 pointer-events-none flex items-center justify-center">
         <motion.div 
           animate={{ rotate: 360 }}
           transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
@@ -60,7 +60,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Main headline */}
-        <motion.h1 {...fadeUp(0.05)} className="font-black leading-[1.05] tracking-tighter mb-6 flex flex-col items-center">
+        <motion.h1 {...fadeUp(0.05)} className="font-display font-bold leading-[1.05] tracking-tighter mb-6 flex flex-col items-center">
           <span
             style={{
               fontSize: "clamp(4rem, 12vw, 7rem)",
