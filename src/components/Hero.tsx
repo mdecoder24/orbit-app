@@ -50,7 +50,7 @@ export default function Hero() {
         {/* Main headline */}
         <motion.h1 {...fadeUp(0.05)} className="font-display font-black leading-[1.05] tracking-tighter mb-8 flex flex-col items-center">
           <span
-            className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] to-[#0066ff]"
+            className="text-white drop-shadow-md"
             style={{
               fontSize: "clamp(4rem, 12vw, 8rem)",
             }}

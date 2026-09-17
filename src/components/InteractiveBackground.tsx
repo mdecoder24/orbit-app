@@ -71,7 +71,7 @@ export default function InteractiveBackground() {
 
       draw() {
         if (!ctx) return;
-        ctx.fillStyle = "rgba(0, 150, 255, 0.4)"; 
+        ctx.fillStyle = "rgba(255, 255, 255, 0.2)"; 
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
@@ -105,7 +105,7 @@ export default function InteractiveBackground() {
 
           if (distance < 100) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(0, 150, 255, ${0.1 - distance / 100 * 0.1})`;
+            ctx.strokeStyle = `rgba(255, 255, 255, ${0.05 - distance / 100 * 0.05})`;
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -119,7 +119,7 @@ export default function InteractiveBackground() {
         const distanceMouse = Math.sqrt(dxMouse * dxMouse + dyMouse * dyMouse);
         if (distanceMouse < 150) {
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(0, 200, 255, ${0.2 - distanceMouse / 150 * 0.2})`;
+          ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 - distanceMouse / 150 * 0.1})`;
           ctx.lineWidth = 1;
           ctx.moveTo(particles[i].x, particles[i].y);
           ctx.lineTo(mouse.x, mouse.y);
@@ -160,17 +160,17 @@ export default function InteractiveBackground() {
         <motion.div 
           animate={{ rotate: 360 }}
           transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
-          className="absolute w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full border-[1px] border-dashed border-cyan-500/30" 
+          className="absolute w-[400px] h-[400px] md:w-[600px] md:h-[600px] rounded-full border-[1px] border-dashed border-white/10" 
         />
         <motion.div 
           animate={{ rotate: -360 }}
           transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
-          className="absolute w-[600px] h-[600px] md:w-[900px] md:h-[900px] rounded-full border-[1px] border-dashed border-blue-500/20" 
+          className="absolute w-[600px] h-[600px] md:w-[900px] md:h-[900px] rounded-full border-[1px] border-dashed border-blue-500/10" 
         />
         <motion.div 
           animate={{ rotate: 360 }}
           transition={{ duration: 26, repeat: Infinity, ease: "linear" }}
-          className="absolute w-[800px] h-[800px] md:w-[1200px] md:h-[1200px] rounded-full border-[1px] border-dashed border-indigo-500/10" 
+          className="absolute w-[800px] h-[800px] md:w-[1200px] md:h-[1200px] rounded-full border-[1px] border-dashed border-white/5" 
         />
       </div>
 
@@ -178,13 +178,13 @@ export default function InteractiveBackground() {
       <motion.div 
         animate={{ y: [0, -40, 0] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-blue-500/15 rounded-full blur-[100px] mix-blend-screen"
+        className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-blue-500/10 rounded-full blur-[100px] mix-blend-screen"
       />
       
       <motion.div 
         animate={{ y: [0, 40, 0] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute bottom-1/4 right-1/4 w-80 h-80 md:w-[500px] md:h-[500px] bg-cyan-500/15 rounded-full blur-[120px] mix-blend-screen"
+        className="absolute bottom-1/4 right-1/4 w-80 h-80 md:w-[500px] md:h-[500px] bg-white/5 rounded-full blur-[120px] mix-blend-screen"
       />
 
       {/* Interactive Particles Layer */}
