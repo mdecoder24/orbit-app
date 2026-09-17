@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useRegistration } from "@/context/RegistrationContext";
+import TiltCard from "@/components/TiltCard";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -49,7 +50,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-blue-500/20 blur-[60px] md:blur-[100px] rounded-full mix-blend-screen" />
       </div>
 
-      <div className="max-w-5xl mx-auto w-full flex flex-col items-center text-center relative z-10">
+      <TiltCard tiltAmount={3} className="max-w-5xl mx-auto w-full flex flex-col items-center text-center relative z-10">
         
         {/* Trust badge */}
         <motion.div {...fadeUp(0)} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/5 backdrop-blur-md mb-6">
@@ -123,7 +124,7 @@ export default function Hero() {
           </button>
         </motion.div>
 
-      </div>
+      </TiltCard>
     </section>
   );
 }

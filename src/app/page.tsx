@@ -5,7 +5,6 @@ import AboutSection from "@/components/AboutSection";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import Timeline from "@/components/Timeline";
 import Prizes from "@/components/Prizes";
-import Evaluation from "@/components/Evaluation";
 import FAQ from "@/components/FAQ";
 import InteractiveBackground from "@/components/InteractiveBackground";
 import Floating3DBackground from "@/components/Floating3DBackground";
@@ -24,7 +23,6 @@ export default function Home() {
       <FeaturesGrid />
       <Timeline />
       <Prizes />
-      <Evaluation />
       <FAQ />
     </main>
   );
