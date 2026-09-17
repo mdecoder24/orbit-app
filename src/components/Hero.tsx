@@ -56,7 +56,7 @@ export default function Hero() {
         <motion.div {...fadeUp(0)} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/5 backdrop-blur-md mb-6">
           <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
           <span className="text-xs font-bold text-blue-400 tracking-[0.2em] uppercase">
-            Registrations Open · AI Agent Buildathon
+            Registrations Open
           </span>
         </motion.div>
 
