@@ -4,15 +4,15 @@
   --color-brand-blue: #0066ff;
   --color-brand-blue-glow: #00f0ff;
   --color-brand-dark-blue: #1d4ed8;
-  --color-background: #020617;
-  --color-foreground: #f8fafc;
+  --color-background: #000000;
+  --color-foreground: #ffffff;
   --font-sans: var(--font-inter);
   --font-display: var(--font-space-grotesk);
 }
 
 :root {
-  --background: #020617;
-  --foreground: #f8fafc;
+  --background: #000000;
+  --foreground: #ffffff;
 }
 
 body {

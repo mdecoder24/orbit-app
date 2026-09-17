@@ -138,7 +138,7 @@ export default function InteractiveBackground() {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[-1] pointer-events-none bg-[#020617] overflow-hidden">
+    <div className="fixed inset-0 z-[-1] pointer-events-none bg-black overflow-hidden">
       
       {/* Dynamic Mouse Spotlight */}
       <div ref={spotlightRef} className="absolute inset-0 transition-opacity duration-300" />
