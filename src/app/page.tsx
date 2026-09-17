@@ -11,7 +11,7 @@ import Globe from "@/components/Globe";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background relative overflow-hidden overflow-x-hidden w-full max-w-[100vw] selection:bg-blue-500/30">
+    <main className="min-h-screen relative overflow-hidden overflow-x-hidden w-full max-w-[100vw] selection:bg-blue-500/30">
       <BeautifulBackground />
 
       <Globe />

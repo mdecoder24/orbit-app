@@ -30,12 +30,12 @@ export default function Navbar() {
   return (
     <nav>
       <div className="fixed w-full z-50 transition-all duration-300 px-4 top-4">
-        <div className="max-w-6xl mx-auto px-6 py-2 rounded-full bg-[#0a0f1e]/80 backdrop-blur-md border border-white/5 shadow-[0_0_20px_rgba(37,99,235,0.05)] transition-all duration-300">
+        <div className="max-w-6xl mx-auto px-6 py-2 rounded-full bg-[#020617]/60 backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-all duration-300">
           <div className="flex items-center justify-between h-14">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2">
               <span className="text-white font-bold text-xl tracking-tight">
-                Knowvation <span className="text-blue-500 glow-text-blue">Learnings</span>
+                Knowvation <span className="text-gradient-blue">Learnings</span>
               </span>
             </Link>
 
@@ -45,14 +45,14 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-gray-300 hover:text-white transition-colors text-sm font-medium"
+                  className="text-gray-300 hover:text-white hover:text-glow transition-all duration-300 text-sm font-medium"
                 >
                   {link.label}
                 </Link>
               ))}
               <button 
                 onClick={openModal}
-                className="ml-2 px-5 py-2 rounded-full flex items-center justify-center gap-2 border border-white/10 hover:bg-white/5 transition-colors text-white text-sm font-medium"
+                className="ml-2 px-5 py-2 rounded-full flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 transition-all text-white text-sm font-bold shadow-[0_0_15px_rgba(6,182,212,0.4)] hover:shadow-[0_0_25px_rgba(6,182,212,0.6)]"
               >
                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-4 h-4 fill-white">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
@@ -63,7 +63,7 @@ export default function Navbar() {
 
             {/* Mobile Toggle */}
             <button
-              className="md:hidden text-white"
+              className="md:hidden text-white hover:text-cyan-400 transition-colors"
               onClick={() => setIsMobileMenuOpen(true)}
             >
               <Menu className="w-6 h-6" />
@@ -79,11 +79,11 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex flex-col p-6"
+            className="fixed inset-0 z-50 bg-[#020617]/95 backdrop-blur-2xl flex flex-col p-6"
           >
             <div className="flex justify-end">
               <button
-                className="text-white"
+                className="text-white hover:text-cyan-400 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 <X className="w-8 h-8" />
@@ -95,7 +95,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-2xl text-gray-300 hover:text-white hover:glow-text-blue transition-all font-medium"
+                  className="text-2xl text-gray-300 hover:text-white hover:text-glow transition-all font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
@@ -109,9 +109,9 @@ export default function Navbar() {
                   setIsMobileMenuOpen(false);
                   openModal();
                 }}
-                className="mt-8 p-[2px] rounded-[15px] cursor-pointer transition-all duration-300 flex items-center justify-center bg-[#2e8eff]/20 hover:bg-[#2e8eff]/70 hover:shadow-[0_0_10px_rgba(46,142,255,0.5)] focus:bg-[#2e8eff]/70 focus:shadow-[0_0_10px_rgba(46,142,255,0.5)] focus:outline-none bg-[linear-gradient(to_bottom_right,#2e8eff_0%,rgba(46,142,255,0)_30%)] group"
+                className="mt-8 p-[2px] rounded-[15px] cursor-pointer transition-all duration-300 flex items-center justify-center focus:outline-none group"
               >
-                <div className="px-6 h-[47px] rounded-[13px] bg-[#1a1a1a] flex items-center justify-center gap-[12px] text-white font-semibold transition-colors group-hover:bg-[#1a1a1a]/80">
+                <div className="px-6 h-[47px] rounded-[13px] bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 shadow-[0_0_15px_rgba(6,182,212,0.4)] flex items-center justify-center gap-[12px] text-white font-bold transition-all group-hover:shadow-[0_0_25px_rgba(6,182,212,0.6)]">
                   <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-[22px] h-[22px] fill-white">
                     <g data-name="Layer 2" id="Layer_2">
                       <path d="m15.626 11.769a6 6 0 1 0 -7.252 0 9.008 9.008 0 0 0 -5.374 8.231 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 9.008 9.008 0 0 0 -5.374-8.231zm-7.626-4.769a4 4 0 1 1 4 4 4 4 0 0 1 -4-4zm10 14h-12a1 1 0 0 1 -1-1 7 7 0 0 1 14 0 1 1 0 0 1 -1 1z" />

@@ -38,7 +38,7 @@ export default function Themes() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-black font-display text-white mb-4">
-            Buildathon <span className="text-blue-500">Themes</span>
+            Buildathon <span className="text-cyan-400 text-glow">Themes</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Choose a track and build something that matters.
@@ -54,14 +54,14 @@ export default function Themes() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] transition-all duration-300 hover:border-blue-500/50 hover:bg-white/[0.08] hover:shadow-[0_0_40px_rgba(59,130,246,0.2)] flex flex-col p-8"
+              className="group relative overflow-hidden rounded-3xl glass-panel transition-all duration-300 flex flex-col p-8"
             >
               {/* Icon Container */}
-              <div className="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors duration-300">
-                <theme.icon className="w-8 h-8 text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
+              <div className="w-16 h-16 rounded-2xl bg-cyan-900/30 border border-cyan-500/20 flex items-center justify-center mb-6 group-hover:bg-cyan-900/50 transition-colors duration-300">
+                <theme.icon className="w-8 h-8 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" />
               </div>
 
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-3 drop-shadow-md">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3 drop-shadow-sm">
                 {theme.title}
               </h3>
 
@@ -71,7 +71,7 @@ export default function Themes() {
 
               {/* Learn More Link */}
               <div className="mt-auto">
-                <button className="flex items-center gap-2 text-sm font-bold text-blue-500 hover:text-blue-400 transition-colors duration-300 group/btn">
+                <button className="flex items-center gap-2 text-sm font-bold text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group/btn">
                   Learn More
                   <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />

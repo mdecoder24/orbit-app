@@ -16,7 +16,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           className="flex-1"
         >
-          <p className="text-blue-500 font-bold tracking-[0.2em] text-xs mb-4 uppercase">
+          <p className="text-cyan-400 font-bold tracking-[0.2em] text-xs mb-4 uppercase text-glow">
             About The Event
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight font-display">
@@ -24,7 +24,7 @@ export default function AboutSection() {
             <span className="text-gradient-blue">10 days</span>
           </h2>
           
-          <div className="mt-8 text-gray-300 space-y-6 text-lg leading-relaxed">
+          <div className="mt-8 text-gray-400 space-y-6 text-lg leading-relaxed">
             <p>
               The Knowvation AI Buildathon is a solo, structured 10-day sprint designed for 
               individuals who want to go beyond tutorials and build something real. From kickoff to 
@@ -46,9 +46,9 @@ export default function AboutSection() {
           transition={{ duration: 0.6, type: "spring", stiffness: 80 }}
           className="flex-1 w-full max-w-md"
         >
-          <TiltCard tiltAmount={10} className="w-full h-full p-1 rounded-3xl bg-gradient-to-br from-blue-600/30 via-cyan-500/10 to-black">
-            <div className="glass-panel rounded-[22px] p-10 flex flex-col items-center text-center h-full border-none cursor-default group">
-              <h3 className="text-7xl font-black text-white mb-4 font-display drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] group-hover:scale-110 transition-transform duration-500">10</h3>
+          <TiltCard tiltAmount={10} className="w-full h-full p-[1px] rounded-3xl bg-gradient-to-br from-cyan-500/50 via-violet-500/20 to-transparent shadow-[0_0_30px_rgba(6,182,212,0.15)]">
+            <div className="glass-panel rounded-[22px] p-10 flex flex-col items-center text-center h-full cursor-default group">
+              <h3 className="text-7xl font-black text-white mb-4 font-display drop-shadow-[0_0_20px_rgba(6,182,212,0.6)] group-hover:scale-110 transition-transform duration-500 text-glow">10</h3>
               <p className="text-gray-300 text-sm mb-12 leading-relaxed font-medium">
                 Days.<br />
                 Idea to deployed AI product.<br />
@@ -57,16 +57,16 @@ export default function AboutSection() {
               
               <div className="w-full border-t border-white/10 pt-8 flex justify-between px-2">
                 <div className="text-center group/item hover:-translate-y-1 transition-transform cursor-pointer">
-                  <p className="text-cyan-400 font-bold text-2xl mb-1">₹1L</p>
-                  <p className="text-gray-500 text-xs uppercase tracking-wider font-bold group-hover/item:text-cyan-500 transition-colors">Prize</p>
+                  <p className="text-cyan-400 font-bold text-2xl mb-1 text-glow">₹1L</p>
+                  <p className="text-gray-400 text-xs uppercase tracking-wider font-bold group-hover/item:text-cyan-300 transition-colors">Prize</p>
                 </div>
                 <div className="text-center group/item hover:-translate-y-1 transition-transform cursor-pointer">
-                  <p className="text-white font-bold text-2xl mb-1 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">2</p>
-                  <p className="text-gray-500 text-xs uppercase tracking-wider font-bold group-hover/item:text-white transition-colors">Checkpoints</p>
+                  <p className="text-white font-bold text-2xl mb-1 drop-shadow-md">2</p>
+                  <p className="text-gray-400 text-xs uppercase tracking-wider font-bold group-hover/item:text-white transition-colors">Checkpoints</p>
                 </div>
                 <div className="text-center group/item hover:-translate-y-1 transition-transform cursor-pointer">
-                  <p className="text-white font-bold text-2xl mb-1 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">100</p>
-                  <p className="text-gray-500 text-xs uppercase tracking-wider font-bold group-hover/item:text-white transition-colors">Points</p>
+                  <p className="text-white font-bold text-2xl mb-1 drop-shadow-md">100</p>
+                  <p className="text-gray-400 text-xs uppercase tracking-wider font-bold group-hover/item:text-white transition-colors">Points</p>
                 </div>
               </div>
             </div>

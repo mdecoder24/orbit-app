@@ -42,10 +42,10 @@ export default function FAQ() {
     <section id="faq" className="py-24 px-6">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-blue-500 font-bold tracking-[0.2em] text-xs mb-4 uppercase">
+          <p className="text-blue-600 font-bold tracking-[0.2em] text-xs mb-4 uppercase">
             GOT QUESTIONS?
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">FAQ</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2">FAQ</h2>
         </div>
 
         <div className="space-y-4">
@@ -58,8 +58,8 @@ export default function FAQ() {
                 onClick={() => toggleFaq(index)}
                 className="w-full flex items-center justify-between p-6 text-left focus:outline-none"
               >
-                <span className="text-white font-medium text-lg">{faq.question}</span>
-                <span className="text-blue-500 flex-shrink-0 ml-4">
+                <span className="text-slate-900 font-medium text-lg">{faq.question}</span>
+                <span className="text-blue-600 flex-shrink-0 ml-4">
                   {openIndex === index ? (
                     <Minus className="w-5 h-5" />
                   ) : (
@@ -76,7 +76,7 @@ export default function FAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    <div className="px-6 pb-6 text-gray-400 text-sm leading-relaxed border-t border-white/5 pt-4">
+                    <div className="px-6 pb-6 text-slate-600 text-sm leading-relaxed border-t border-slate-200 pt-4">
                       {faq.answer}
                     </div>
                   </motion.div>

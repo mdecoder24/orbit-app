@@ -11,7 +11,7 @@ export default function Globe() {
 
     if (!canvasRef.current) return;
 
-    const globe = createGlobe(canvasRef.current, {
+      const globe = createGlobe(canvasRef.current, {
       devicePixelRatio: 2,
       width: 1000,
       height: 1000,
@@ -21,9 +21,9 @@ export default function Globe() {
       diffuse: 1.2,
       mapSamples: 16000,
       mapBrightness: 6,
-      baseColor: [0.05, 0.05, 0.05],
-      markerColor: [0.1, 0.5, 1],
-      glowColor: [0.05, 0.15, 0.4],
+      baseColor: [0.05, 0.05, 0.1],
+      markerColor: [0.02, 0.71, 0.83], // cyan
+      glowColor: [0.02, 0.02, 0.05],
       markers: [
         // Add some random markers to make it look alive
         { location: [37.7595, -122.4367], size: 0.03 },
@@ -46,7 +46,7 @@ export default function Globe() {
   }, []);
 
   return (
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] w-[150vw] h-[150vw] md:w-[1000px] md:h-[1000px] max-w-[1000px] max-h-[1000px] z-0 opacity-40 pointer-events-none flex items-center justify-center">
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[40%] w-[150vw] h-[150vw] md:w-[1000px] md:h-[1000px] max-w-[1000px] max-h-[1000px] z-0 opacity-80 pointer-events-none flex items-center justify-center">
       <canvas
         ref={canvasRef}
         style={{
