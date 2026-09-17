@@ -2,28 +2,28 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { Bot, Landmark, GraduationCap, Lightbulb } from "lucide-react";
 
 const themes = [
   {
     title: "Agentic AI & Social Impact Solutions",
     description: "Build autonomous AI agents that solve real-world problems, from climate change monitoring to equitable healthcare distribution.",
-    image: "/themes/theme_agentic_ai.jpg",
+    icon: Bot,
   },
   {
     title: "Financial Inclusion & Open Banking",
     description: "Develop seamless fintech solutions and digital currencies that bridge the gap for unbanked populations globally.",
-    image: "/themes/theme_financial_inclusion.jpg",
+    icon: Landmark,
   },
   {
     title: "Next-Gen EdTech & Accessible Learning",
     description: "Create accessible, immersive learning environments using AI tutors and mixed reality for students everywhere.",
-    image: "/themes/theme_edtech.jpg",
+    icon: GraduationCap,
   },
   {
     title: "Open Innovation",
     description: "Design open-source protocols, collaborative networks, and interconnected frameworks that drive humanity forward.",
-    image: "/themes/theme_open_innovation.jpg",
+    icon: Lightbulb,
   },
 ];
 
@@ -54,24 +54,29 @@ export default function Themes() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0f1e]/60 backdrop-blur-md shadow-2xl transition-all duration-300 hover:border-blue-500/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)]"
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0f1e]/60 backdrop-blur-md shadow-2xl transition-all duration-300 hover:border-blue-500/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] flex flex-col p-8"
             >
-              <div className="relative h-48 sm:h-64 w-full overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1e]/90 to-transparent z-10 transition-opacity duration-300 group-hover:opacity-70" />
-                <Image
-                  src={theme.image}
-                  alt={theme.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+              {/* Icon Container */}
+              <div className="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors duration-300">
+                <theme.icon className="w-8 h-8 text-blue-400 group-hover:text-blue-300 transition-colors duration-300" />
               </div>
-              <div className="relative z-20 p-8 -mt-16">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-3 drop-shadow-md">
-                  {theme.title}
-                </h3>
-                <p className="text-gray-400 text-sm md:text-base leading-relaxed">
-                  {theme.description}
-                </p>
+
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3 drop-shadow-md">
+                {theme.title}
+              </h3>
+
+              <p className="text-gray-400 text-sm md:text-base leading-relaxed mb-8 flex-grow">
+                {theme.description}
+              </p>
+
+              {/* Learn More Link */}
+              <div className="mt-auto">
+                <button className="flex items-center gap-2 text-sm font-bold text-blue-500 hover:text-blue-400 transition-colors duration-300 group/btn">
+                  Learn More
+                  <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                  </svg>
+                </button>
               </div>
             </motion.div>
           ))}
