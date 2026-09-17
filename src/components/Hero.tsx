@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useRegistration } from "@/context/RegistrationContext";
 
 const fadeUp = (delay = 0) => ({
   initial: { opacity: 0, y: 24 },
@@ -11,6 +12,7 @@ const fadeUp = (delay = 0) => ({
 
 export default function Hero() {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const { openModal } = useRegistration();
 
   useEffect(() => {
     const target = new Date("October 1, 2026 00:00:00").getTime();
@@ -59,10 +61,9 @@ export default function Hero() {
 
         {/* Main headline */}
         <motion.h1 {...fadeUp(0.05)} className="font-black leading-[1.05] tracking-tighter mb-6 flex flex-col items-center">
-          <span className="text-white" style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}>AI & AGENTIC</span>
           <span
             style={{
-              fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
+              fontSize: "clamp(4rem, 12vw, 7rem)",
               background: "linear-gradient(135deg, #00f0ff 0%, #0066ff 100%)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -106,6 +107,21 @@ export default function Hero() {
         </motion.div>
 
         {/* CTAs */}
+        <motion.div {...fadeUp(0.25)} className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full mt-2">
+          <button 
+            onClick={openModal}
+            className="px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold text-sm md:text-base transition-all duration-300 shadow-[0_0_30px_rgba(0,102,255,0.3)] hover:shadow-[0_0_50px_rgba(0,102,255,0.6)] flex items-center gap-2 group"
+          >
+            <span>Register Now</span>
+            <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </button>
+
+          <button className="px-8 py-3.5 rounded-full font-bold text-sm md:text-base transition-all duration-300 flex items-center gap-2 border border-white/10 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white">
+            Explore Themes
+          </button>
+        </motion.div>
 
       </div>
     </section>

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useRegistration } from "@/context/RegistrationContext";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -16,6 +17,7 @@ const navLinks = [
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { openModal } = useRegistration();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,6 +54,7 @@ export default function Navbar() {
                 aria-label="Register Button" 
                 tabIndex={0} 
                 role="button" 
+                onClick={openModal}
                 className="ml-4 p-[2px] rounded-[12px] cursor-pointer transition-all duration-300 flex items-center justify-center bg-[#2e8eff]/20 hover:bg-[#2e8eff]/70 hover:shadow-[0_0_10px_rgba(46,142,255,0.5)] focus:bg-[#2e8eff]/70 focus:shadow-[0_0_10px_rgba(46,142,255,0.5)] focus:outline-none bg-[linear-gradient(to_bottom_right,#2e8eff_0%,rgba(46,142,255,0)_30%)] group"
               >
                 <div className="px-4 h-[36px] rounded-[10px] bg-[#1a1a1a] flex items-center justify-center gap-[8px] text-white font-medium text-sm transition-colors group-hover:bg-[#1a1a1a]/80">
@@ -109,7 +112,10 @@ export default function Navbar() {
                 aria-label="Register Button" 
                 tabIndex={0} 
                 role="button" 
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  openModal();
+                }}
                 className="mt-8 p-[2px] rounded-[15px] cursor-pointer transition-all duration-300 flex items-center justify-center bg-[#2e8eff]/20 hover:bg-[#2e8eff]/70 hover:shadow-[0_0_10px_rgba(46,142,255,0.5)] focus:bg-[#2e8eff]/70 focus:shadow-[0_0_10px_rgba(46,142,255,0.5)] focus:outline-none bg-[linear-gradient(to_bottom_right,#2e8eff_0%,rgba(46,142,255,0)_30%)] group"
               >
                 <div className="px-6 h-[47px] rounded-[13px] bg-[#1a1a1a] flex items-center justify-center gap-[12px] text-white font-semibold transition-colors group-hover:bg-[#1a1a1a]/80">
