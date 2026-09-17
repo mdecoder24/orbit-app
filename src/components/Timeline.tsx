@@ -37,7 +37,7 @@ export default function Timeline() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="w-full bg-[#0a0f1e]/60 backdrop-blur-md border border-white/10 rounded-2xl p-4 md:p-6 flex flex-col md:flex-row items-start md:items-center justify-between hover:border-blue-500/50 hover:bg-white/5 transition-all duration-300 group shadow-lg"
+              className="w-full bg-white/[0.03] backdrop-blur-2xl border border-white/10 rounded-2xl p-4 md:p-6 flex flex-col md:flex-row items-start md:items-center justify-between hover:border-blue-500/50 hover:bg-white/[0.08] transition-all duration-300 group shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]"
             >
               <div className="flex items-center gap-4 md:gap-6 w-full md:w-auto">
                 <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">

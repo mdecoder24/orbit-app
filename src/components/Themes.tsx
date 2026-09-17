@@ -54,7 +54,7 @@ export default function Themes() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -5 }}
-              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0a0f1e]/60 backdrop-blur-md shadow-2xl transition-all duration-300 hover:border-blue-500/50 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] flex flex-col p-8"
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] transition-all duration-300 hover:border-blue-500/50 hover:bg-white/[0.08] hover:shadow-[0_0_40px_rgba(59,130,246,0.2)] flex flex-col p-8"
             >
               {/* Icon Container */}
               <div className="w-16 h-16 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-6 group-hover:bg-blue-500/20 transition-colors duration-300">

@@ -62,7 +62,7 @@ export default function Hero() {
         {/* Countdown */}
         <motion.div {...fadeUp(0.2)} className="flex flex-col items-center mb-6 w-full">
           <p className="text-[10px] md:text-[11px] text-blue-500 font-bold tracking-[0.3em] uppercase mb-3">Systems go live in</p>
-          <div className="flex items-start justify-center gap-4 sm:gap-8 bg-[#0a0f1e]/60 px-6 sm:px-12 pt-5 pb-8 rounded-[2rem] border border-white/5 shadow-2xl w-full max-w-xl backdrop-blur-md">
+          <div className="flex items-start justify-center gap-4 sm:gap-8 bg-white/[0.03] px-6 sm:px-12 pt-5 pb-8 rounded-[2rem] border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] w-full max-w-xl backdrop-blur-2xl">
             
             <div className="flex flex-col items-center relative">
               <span className="text-4xl md:text-5xl font-bold text-white font-mono leading-none">{timeLeft.days.toString().padStart(2, "0")}</span>
