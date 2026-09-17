@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import TiltCard from "@/components/TiltCard";
 
 export default function AboutSection() {
   return (
@@ -43,31 +44,33 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, type: "spring", stiffness: 80 }}
-          className="flex-1 w-full max-w-md p-1 rounded-3xl bg-gradient-to-br from-blue-600/30 via-cyan-500/10 to-black transition-all duration-500"
+          className="flex-1 w-full max-w-md"
         >
-          <div className="glass-panel rounded-[22px] p-10 flex flex-col items-center text-center h-full border-none">
-            <h3 className="text-7xl font-black text-white mb-4 font-display drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">10</h3>
-            <p className="text-gray-300 text-sm mb-12 leading-relaxed font-medium">
-              Days.<br />
-              Idea to deployed AI product.<br />
-              Solo. Mentored. Real.
-            </p>
-            
-            <div className="w-full border-t border-white/10 pt-8 flex justify-between px-2">
-              <div className="text-center group">
-                <p className="text-cyan-400 font-bold text-2xl mb-1 transition-all">₹1L</p>
-                <p className="text-gray-500 text-xs uppercase tracking-wider font-bold">Prize</p>
-              </div>
-              <div className="text-center group">
-                <p className="text-white font-bold text-2xl mb-1 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">2</p>
-                <p className="text-gray-500 text-xs uppercase tracking-wider font-bold">Checkpoints</p>
-              </div>
-              <div className="text-center group">
-                <p className="text-white font-bold text-2xl mb-1 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">100</p>
-                <p className="text-gray-500 text-xs uppercase tracking-wider font-bold">Points</p>
+          <TiltCard tiltAmount={10} className="w-full h-full p-1 rounded-3xl bg-gradient-to-br from-blue-600/30 via-cyan-500/10 to-black">
+            <div className="glass-panel rounded-[22px] p-10 flex flex-col items-center text-center h-full border-none cursor-default group">
+              <h3 className="text-7xl font-black text-white mb-4 font-display drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] group-hover:scale-110 transition-transform duration-500">10</h3>
+              <p className="text-gray-300 text-sm mb-12 leading-relaxed font-medium">
+                Days.<br />
+                Idea to deployed AI product.<br />
+                Solo. Mentored. Real.
+              </p>
+              
+              <div className="w-full border-t border-white/10 pt-8 flex justify-between px-2">
+                <div className="text-center group/item hover:-translate-y-1 transition-transform cursor-pointer">
+                  <p className="text-cyan-400 font-bold text-2xl mb-1">₹1L</p>
+                  <p className="text-gray-500 text-xs uppercase tracking-wider font-bold group-hover/item:text-cyan-500 transition-colors">Prize</p>
+                </div>
+                <div className="text-center group/item hover:-translate-y-1 transition-transform cursor-pointer">
+                  <p className="text-white font-bold text-2xl mb-1 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">2</p>
+                  <p className="text-gray-500 text-xs uppercase tracking-wider font-bold group-hover/item:text-white transition-colors">Checkpoints</p>
+                </div>
+                <div className="text-center group/item hover:-translate-y-1 transition-transform cursor-pointer">
+                  <p className="text-white font-bold text-2xl mb-1 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">100</p>
+                  <p className="text-gray-500 text-xs uppercase tracking-wider font-bold group-hover/item:text-white transition-colors">Points</p>
+                </div>
               </div>
             </div>
-          </div>
+          </TiltCard>
         </motion.div>
       </div>
     </section>

@@ -35,39 +35,24 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-6 pt-24 pb-8 overflow-hidden">
       
-      {/* AI Glowing Core Background Effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] md:w-[600px] md:h-[600px] opacity-50 pointer-events-none flex items-center justify-center">
-        <motion.div 
-          animate={{ rotate: 360 }}
-          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-0 rounded-full border-[1px] border-dashed border-blue-500/50" 
-        />
-        <motion.div 
-          animate={{ rotate: -360 }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute inset-4 md:inset-8 rounded-full border-[2px] border-dotted border-cyan-400/40" 
-        />
-        <div className="absolute inset-0 bg-blue-500/20 blur-[60px] md:blur-[100px] rounded-full mix-blend-screen" />
-      </div>
+
 
       <TiltCard tiltAmount={3} className="max-w-5xl mx-auto w-full flex flex-col items-center text-center relative z-10">
         
         {/* Trust badge */}
-        <motion.div {...fadeUp(0)} className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-blue-500/20 bg-blue-500/5 backdrop-blur-md mb-6">
-          <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-          <span className="text-xs font-bold text-blue-400 tracking-[0.2em] uppercase">
+        <motion.div {...fadeUp(0)} className="inline-flex items-center gap-2 px-5 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-8">
+          <span className="w-2 h-2 rounded-full bg-blue-500" />
+          <span className="text-[10px] font-bold text-blue-500 tracking-[0.2em] uppercase">
             Registrations Open
           </span>
         </motion.div>
 
         {/* Main headline */}
-        <motion.h1 {...fadeUp(0.05)} className="font-display font-bold leading-[1.05] tracking-tighter mb-6 flex flex-col items-center">
+        <motion.h1 {...fadeUp(0.05)} className="font-display font-black leading-[1.05] tracking-tighter mb-8 flex flex-col items-center">
           <span
+            className="text-transparent bg-clip-text bg-gradient-to-r from-[#00f0ff] to-[#0066ff]"
             style={{
-              fontSize: "clamp(4rem, 12vw, 7rem)",
-              background: "linear-gradient(135deg, #00f0ff 0%, #0066ff 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
+              fontSize: "clamp(4rem, 12vw, 8rem)",
             }}
           >
             BUILDATHON
@@ -75,43 +60,43 @@ export default function Hero() {
         </motion.h1>
 
         {/* Description */}
-        <motion.p {...fadeUp(0.15)} className="text-gray-400 text-base md:text-lg leading-relaxed max-w-2xl mb-8">
-          A <strong className="text-white font-semibold">10-day solo sprint</strong> where individuals build 
-          autonomous AI agents and real products from idea to deployed MVP. <br className="hidden md:block" />
-          <span className="text-blue-400 font-medium">Mentored. Evaluated. Rewarded.</span>
+        <motion.p {...fadeUp(0.15)} className="text-gray-400 text-base md:text-lg leading-relaxed max-w-2xl mb-12">
+          A <strong className="text-white font-semibold">10-day solo sprint</strong> where individuals build autonomous AI agents and real <br className="hidden md:block" />
+          products from idea to deployed MVP.<br />
+          <span className="text-blue-500 font-medium block mt-2">Mentored. Evaluated. Rewarded.</span>
         </motion.p>
 
         {/* Countdown */}
-        <motion.div {...fadeUp(0.2)} className="flex flex-col items-center mb-8 w-full">
-          <p className="text-[10px] md:text-xs text-blue-400 font-bold tracking-[0.2em] uppercase mb-3">Systems go live in</p>
-          <div className="flex items-center justify-center gap-2 sm:gap-4 md:gap-8 glass-panel px-4 sm:px-10 py-4 rounded-3xl sm:rounded-full shadow-[0_0_30px_rgba(0,102,255,0.15)] border-blue-500/20 w-full max-w-xl overflow-x-auto no-scrollbar">
+        <motion.div {...fadeUp(0.2)} className="flex flex-col items-center mb-10 w-full">
+          <p className="text-[10px] md:text-[11px] text-blue-500 font-bold tracking-[0.3em] uppercase mb-4">Systems go live in</p>
+          <div className="flex items-center justify-center gap-4 sm:gap-8 bg-[#0a0f1e]/60 px-6 sm:px-12 py-5 rounded-[2rem] border border-white/5 shadow-2xl w-full max-w-xl overflow-x-auto no-scrollbar backdrop-blur-md">
             <div className="flex flex-col items-center">
               <span className="text-3xl md:text-4xl font-black text-white font-mono leading-none">{timeLeft.days.toString().padStart(2, "0")}</span>
-              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-2">Days</span>
+              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-3">Days</span>
             </div>
-            <span className="text-xl md:text-3xl text-blue-500/50 -translate-y-2 md:-translate-y-2 font-bold">:</span>
+            <span className="text-xl md:text-3xl text-blue-600 font-bold pb-[22px] md:pb-[26px]">:</span>
             <div className="flex flex-col items-center">
               <span className="text-3xl md:text-4xl font-black text-white font-mono leading-none">{timeLeft.hours.toString().padStart(2, "0")}</span>
-              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-2">Hours</span>
+              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-3">Hours</span>
             </div>
-            <span className="text-xl md:text-3xl text-blue-500/50 -translate-y-2 md:-translate-y-2 font-bold">:</span>
+            <span className="text-xl md:text-3xl text-blue-600 font-bold pb-[22px] md:pb-[26px]">:</span>
             <div className="flex flex-col items-center">
               <span className="text-3xl md:text-4xl font-black text-white font-mono leading-none">{timeLeft.minutes.toString().padStart(2, "0")}</span>
-              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-2">Min</span>
+              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-3">Min</span>
             </div>
-            <span className="text-xl md:text-3xl text-blue-500/50 -translate-y-2 md:-translate-y-2 font-bold">:</span>
+            <span className="text-xl md:text-3xl text-blue-600 font-bold pb-[22px] md:pb-[26px]">:</span>
             <div className="flex flex-col items-center">
               <span className="text-3xl md:text-4xl font-black text-white font-mono leading-none">{timeLeft.seconds.toString().padStart(2, "0")}</span>
-              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-2">Sec</span>
+              <span className="text-[9px] md:text-[10px] text-gray-500 font-bold tracking-[0.2em] uppercase mt-3">Sec</span>
             </div>
           </div>
         </motion.div>
 
         {/* CTAs */}
-        <motion.div {...fadeUp(0.25)} className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full mt-2">
+        <motion.div {...fadeUp(0.25)} className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full mt-4">
           <button 
             onClick={openModal}
-            className="px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold text-sm md:text-base transition-all duration-300 shadow-[0_0_30px_rgba(0,102,255,0.3)] hover:shadow-[0_0_50px_rgba(0,102,255,0.6)] flex items-center gap-2 group"
+            className="px-8 py-3.5 bg-blue-600 hover:bg-blue-500 text-white rounded-full font-bold text-sm md:text-base transition-all duration-300 shadow-[0_0_30px_rgba(37,99,235,0.3)] hover:shadow-[0_0_50px_rgba(37,99,235,0.6)] flex items-center gap-2 group"
           >
             <span>Register Now</span>
             <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -119,7 +104,7 @@ export default function Hero() {
             </svg>
           </button>
 
-          <button className="px-8 py-3.5 rounded-full font-bold text-sm md:text-base transition-all duration-300 flex items-center gap-2 border border-white/10 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white">
+          <button className="px-8 py-3.5 rounded-full font-bold text-sm md:text-base transition-all duration-300 flex items-center gap-2 border border-white/5 bg-transparent hover:bg-white/5 text-gray-300 hover:text-white">
             Explore Themes
           </button>
         </motion.div>

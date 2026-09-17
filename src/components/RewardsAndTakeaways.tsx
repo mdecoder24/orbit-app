@@ -2,23 +2,57 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Medal, Check, ScrollText, Rocket, Brain, Laptop } from "lucide-react";
+import { Medal, Check, ScrollText, Rocket, Brain, Laptop, Trophy, FileBadge, Zap, Globe } from "lucide-react";
 import TiltCard from "@/components/TiltCard";
 
-export default function Prizes() {
+const features = [
+  {
+    icon: <Trophy className="w-8 h-8 text-blue-500 mb-6 group-hover:scale-110 transition-transform" />,
+    title: "Win ₹1,00,000",
+    description: "Cash prize and rewards worth one lakh for the winner.",
+  },
+  {
+    icon: <FileBadge className="w-8 h-8 text-blue-400 mb-6 group-hover:scale-110 transition-transform" />,
+    title: "Certificate",
+    description: "All participants receive an official completion certificate from Knowvation Learnings.",
+  },
+  {
+    icon: <Rocket className="w-8 h-8 text-blue-300 mb-6 group-hover:scale-110 transition-transform" />,
+    title: "Real Project",
+    description: "Walk away with a deployed AI product you built yourself — hands-on, portfolio-ready.",
+  },
+  {
+    icon: <Brain className="w-8 h-8 text-blue-500 mb-6 group-hover:scale-110 transition-transform" />,
+    title: "Expert Mentorship",
+    description: "Two structured 1:1 mentor sessions plus async support throughout the sprint.",
+  },
+  {
+    icon: <Zap className="w-8 h-8 text-cyan-400 mb-6 group-hover:scale-110 transition-transform" />,
+    title: "Solo Sprint",
+    description: "No teams. Every builder works independently — your idea, your code, your win.",
+  },
+  {
+    icon: <Globe className="w-8 h-8 text-blue-300 mb-6 group-hover:scale-110 transition-transform" />,
+    title: "Online Event",
+    description: "Fully remote. Participate from anywhere in the world, no goodies, no travel required.",
+  }
+];
+
+export default function RewardsAndTakeaways() {
   return (
-    <section id="prizes" className="py-24 px-6">
+    <section id="rewards" className="py-24 px-6 relative z-10">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <p className="text-blue-500 font-bold tracking-[0.2em] text-xs mb-4 uppercase">
-            WHAT YOU WIN
+            WHAT YOU GET
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-2">
-            Prizes & <span className="text-gradient-blue">Rewards</span>
+            Rewards & <span className="text-gradient-blue">Takeaways</span>
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8">
+        {/* Top Half: Prizes */}
+        <div className="flex flex-col lg:flex-row gap-8 mb-8">
           {/* Winner Card */}
           <TiltCard tiltAmount={10} className="flex-1 lg:max-w-md">
             <motion.div
@@ -59,7 +93,7 @@ export default function Prizes() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.1 }}
               className="h-full flex flex-col justify-between group glass-panel rounded-2xl p-8 transition-all duration-300 cursor-default"
             >
               <p className="text-blue-500 font-bold tracking-widest text-xs uppercase mb-3">
@@ -107,6 +141,29 @@ export default function Prizes() {
               </div>
             </motion.div>
           </TiltCard>
+        </div>
+
+        {/* Bottom Half: Takeaways Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {features.map((feature, index) => (
+            <TiltCard key={index} tiltAmount={10} className="h-full">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="glass-panel p-8 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group h-full flex flex-col"
+              >
+                <div className="group-hover:-translate-y-2 transition-transform duration-300">
+                  {feature.icon}
+                  <h4 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors font-display">{feature.title}</h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
+              </motion.div>
+            </TiltCard>
+          ))}
         </div>
       </div>
     </section>
