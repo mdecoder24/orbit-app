@@ -32,13 +32,13 @@ export default function Globe() {
         { location: [35.6895, 139.6917], size: 0.08 },
         { location: [19.076, 72.8777], size: 0.1 }, // Mumbai
       ],
-      onRender: (state) => {
+      onRender: (state: Record<string, any>) => {
         // Called on every animation frame.
         // `state` will be an empty object, return updated params.
         state.phi = phi;
         phi += 0.003;
       },
-    });
+    } as any);
 
     return () => {
       globe.destroy();
